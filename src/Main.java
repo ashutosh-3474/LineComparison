@@ -17,6 +17,8 @@ public class Main {
             System.out.println("Both lines are not equal");
         }
 
+        System.out.println(l1.compare(l2));
+
     }
     public Point getPoint(){
         Scanner sc = new Scanner(System.in);

@@ -25,5 +25,18 @@ public class Line {
         return this.length == l1.length;
     }
 
+    public String compare(Object obj)
+    {
+        if (!(obj instanceof  Line)) return "Lines are not valid";
+        Line l1 = (Line) obj;
+
+        if (this.length == -1) this.calculateLength();
+        if (l1.length == -1) l1.calculateLength();
+
+        if (this.length == l1.length) return "Both line are equal";
+        else if (this.length > l1.length) return "Line is greater than other line";
+        else return "Line is smaller than other line";
+    }
+
 
 }
